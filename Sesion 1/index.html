@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Informe de prácticas de CGSM (2015-2016)</title>
+        <link rel="stylesheet" type="text/css" href="report.css">
+    </head>
+    <body>
+        <!-- Información general -->
+        <div id="head">
+            <table id="general">
+                <tr>
+                    <th class="header">Nombre:</th>
+                    <td>Pedro Palacio Estrada</td>                     
+                </tr>
+                <tr>
+                    <th>Práctica:</th>
+                    <td>1</td> 
+                </tr>
+            </table>
+        </div>
+        <div id="content">
+            <h1>Memoria</h1>
+            <h2>Descripción de la práctica</h2>
+                <p>En esta primera práctica de la asignatura comenzamos a comprender los conceptos básicos que ofrece la librería Three, donde aprendemos en primer lugar a comprobar a través
+                    del script si nuestro navegador tiene habilitado Webgl o no. <br> Después continuamos creando nuestro primer cuerpo geométrico (Una caja) que poostereiormente rotaremos para ver su forma en 3D. <br>
+                    Finalmente, añadimos otros dos cuerpos geométricos (Esfera y  cilindro), creamos otro cuerpo en 2D a partir de vectores con sus respectivas caras, añadimos materiales determinados a cada objecto para comprobar las diferencias
+                    que aportan estos, y añadimos una luz que permita visualizar aquellos objetos que necesiten luz.
+                </p>
+            <h2>Ejercicio 1</h2>
+            <p>En este primer ejercicio se añade la librería de three y comprobamos si está habilitado webgl en nuestro navegador (A través de la consola lo comprobamos)</p>
+                <iframe class="container" src="prac1-1.html">                    
+                </iframe>
+                
+            <h2>Ejercicio 2</h2>
+            <p>A continuación creamos una camara con una vista determinada, añadimos una caja, y para poder ver dicho cuerpo creamos una escena y metemos la caja</p>
+            <p></p>
+                <iframe class="container" src="prac1-2.html">
+                    Escena 2
+                </iframe>
+            <h2>Ejercicio 3</h2>
+            <p>En este tercer ejercicio simplemente añadimos una rotación al elemento box creado anteriormente</p>
+                <iframe class="container" src="prac1-3.html">
+                    Escena 3
+                </iframe>
+                            <h2>Ejercicio 4</h2>
+                            <p>Ahora procedemos añadir otras dos figuras (Esfera y cilindro), y hacer una translación en el eje x para que podamos ver todos los objetos</p>
+                <iframe class="container" src="prac1-4.html">
+                    Escena 4
+                </iframe>
+                <h2>Ejercicio 5</h2>
+                <p>Para este quinto ejercicio creamos un objeto Geometry que nos permite hacer una creación de un objeto a partir de sus vectores y sus caras.</p>
+                <iframe class="container" src="prac1-5.html">
+                    Escena 5
+                </iframe>
+                <h2>Ejercicio 6</h2>
+                <p>En este último ejercicio se han añadido distintos materiales a las formas geométricas creadas anteriormente. Para poder visualizar dichas figuras hemos añadido un punto de luz que las ilumine.</p>
+                <iframe class="container" src="prac1-6.html">
+                    Escena 6
+                </iframe>
+            <h2>Dificultades encontradas</h2>
+            <p>La única dificultad existente ha sido la creación de los objetos geométricosa partir de vectores, donde quitando el problema con la versión de Three.js, tuve alguna confusión al crear los vectores que conformaban la casa</p>
+        </div>
+    </body>
+</html>
