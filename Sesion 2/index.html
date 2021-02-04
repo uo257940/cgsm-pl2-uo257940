@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Informe de prácticas de CGSM (2015-2016)</title>
+        <link rel="stylesheet" type="text/css" href="report.css">
+    </head>
+    <body>
+        <!-- Información general -->
+        <div id="head">
+            <table id="general">
+                <tr>
+                    <th class="header">Nombre:</th>
+                    <td>Pedro Palacio Estrada</td>                     
+                </tr>
+                <tr>
+                    <th>Práctica:</th>
+                    <td>2</td> 
+                </tr>
+            </table>
+        </div>
+        <div id="content">
+            <h1>Memoria</h1>
+            <h2>Descripción de la práctica</h2>
+                <p>En esta segunda Práctica de la asignatura se buscará crear un mini sistema solar en el que se comienzen a usar conceptos
+                    como puede ser el de texturas sobre los materiales de los cuerpos que creamos, los objetos3D que agrupan varios cuerpos geométricos, animaciones,shaders y modelos cargados con collada.
+                </p>
+            <h2>Ejercicio 1</h2>
+            <p>En este primer ejercicio reutilizamos el ejercicio previo en el que construiamos un cubo, y utilizamos una imagen para aplicarla como textura del material, y así obtener un cubo con textura de caja</p>
+                <iframe class="container" src="prac2-1.html">                    
+                </iframe>
+                
+            <h2>Ejercicio 2</h2>
+            <p>Ahora continuamos la práctica creando una esfera como la que teníamos en la práctica anterior, y cargándole una imagen de la superficie terrestre, de modo que tendremos una simulación de la tierra. Además le añadimos un foco de luz (PointLight) simulando la luz solar.   </p>
+            <p></p>
+                <iframe class="container" src="prac2-2.html">
+                    Escena 2
+                </iframe>
+            <h2>Ejercicio 3</h2>
+            <p>A continuacion creamos una esfera similar donde cargamos una textura en formato png que permitirá hacer transparencia y poder seguir viendo la tierra con alguna nube gracias al atributo transparent del material.</p>
+                <iframe class="container" src="prac2-3.html">
+                    Escena 3
+                </iframe>
+                            <h2>Ejercicio 4</h2>
+                            <p>Ahora procedemos a rotar la tierra sobre el plano de la órbita.</p>
+                <iframe class="container" src="prac2-4.html">
+                    Escena 4
+                </iframe>
+                <h2>Ejercicio 5</h2>
+                <p>Continuamos con la creación de otra esfera con una textura de la luna, para su simulación. Dicha esfera tendrá un tamaño de 0.27 (la tierra 1) simulando una escala real.</p>
+                <iframe class="container" src="prac2-5.html">
+                    Escena 5
+                </iframe>
+                <h2>Ejercicio 6</h2>
+                <p>Ahora tocaría añadir una función de animación que permite renderizar la escena cada cierto tiempo, de modo que podamos hacer que los atributos vayan evolucionando a lo largo del tiempo de ejecución. Por ejemplo hacemos que el globo terraqueo y su atmósfera roten sobre su eje Y dando el efecto de rotación terrestre en la simulación.</p>
+                <iframe class="container" src="prac2-6.html">
+                    Escena 6
+                </iframe>
+                <h2>Ejercicio 7</h2>
+                <p>El ejercicio 7 consiste en la rotación de la luna alrededor de la tierra, a la vez que sobre si misma. Para ello modificamos la rotación en la función de animación, y hacemos una translación sobre el eje X de modo que esta gire alrededor de la coordenada (0,0) donde esta la tierra</p>
+                <iframe class="container" src="prac2-7.html">
+                    Escena 7
+                </iframe>
+                <p>Ejercicio 8</p>
+                <p>En este ejercicio comenzamos añadiendo dos ficheros .glsn y las texturas correspondientes , creamos una Esfera con una textura de tipo ShaderMaterial con su shader correspondiente, con un aspecto similar al del sol, y una escala y una distancia a la tierra no representativas (Ya que no entrarían en la escena con datos reales). </p>
+
+                <iframe class="container" src="prac2-8.html">
+                    Escena 8
+                </iframe>
+                <p>Ejercicio 9</p>
+                <p>En este último ejercicio, simplemente utilizamos la librería de collada para cargar un modelo prediseñado con un programa de modelado 3d, de la ISS. Además escalamos dicho modelo para que sea visible y no oculte el resto de la simulación.</p>
+                <iframe class="container" src="prac2-9.html">
+                    Escena 9
+                </iframe>
+            <h2>Dificultades encontradas</h2>
+            <p>Ha sido una práctica muy entretenida, y que personalmente me ha dado algún problema al crear la rotación de la luna alrededor de la tierra, ya que la función de animación no hacía lo que quería. Pero tras probar varias alternativas finalmente acabó funcionando. Quitando ese problema el resto de la práctica se pudo hacer con normalidad.
+                También quiero indicar que en las primeras simulaciones antes de la implementación de la animación, ya tenía creada una función que me permitía ver mover con el ratón los espacios para ver si estaban bien creados los cuerpos o no.
+            </p>
+        </div>
+    </body>
+</html>
