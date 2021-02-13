@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Informe de prácticas de CGSM (2020-2020)</title>
+        <link rel="stylesheet" type="text/css" href="report.css">
+    </head>
+    <body>
+        <!-- Información general -->
+        <div id="head">
+            <table id="general">
+                <tr>
+                    <th class="header">Nombre:</th>
+                    <td>Pedro Palacio Estrada</td>                     
+                </tr>
+                <tr>
+                    <th>Práctica:</th>
+                    <td>3</td> 
+                </tr>
+            </table>
+        </div>
+        <div id="content">
+            <h1>Memoria</h1>
+            <h2>Descripción de la práctica</h2>
+                <p>
+                    En esta práctica continuamos introduciendo conceptos de Webgl comenzando con texturas avanzadas, poosteriormente introducimos la posibilidad de añadir texturas de video a nuestras composiciones.
+                    Después aprenderemos a introducir variables a la escena para poder modificar el entorno y la composición a través de ella.Finalmente aprenderemos a introducir cubos con distintas caras (cada una con su material) y los dispondremos sobre na malla. 
+                </p>
+            <h2>Ejercicio 1</h2>
+            <p>En este primer ejercicio utilizamos el ejercicio del cubo de la prac1-3, añadiendole una textura de ladrillos y un bumpMap determinado que hará que la textura tenga un relieve determinado y por lo tanto se vea distinta. Adicionalmente haremos girar el cubo sobre el eje Y para su visualización</p>
+                <iframe class="container" src="prac3-1.html">                    
+                </iframe>
+                
+            <h2>Ejercicio 2</h2>
+            <p>Continuamos la práctica introduciendo en el html un video determinado en dos formatos intentando que sea compatible en todo navegador.Tras esto , seguimos añadiendo un overlay en el que podemos contemplar distintas varibles de la visualizacion.
+                Seguimos añadiendo un cuerpo en 2d que contrenda el video, con una resolución determinada, y finalmente hacemos que ese muro donde se proyecta el video rote sobre el ejey , y vaya actualizandose cada fotograma del video.
+            </p>
+            <p></p>
+                <iframe class="container" src="prac3-2.html">
+                    Escena 2
+                </iframe>
+            <h2>Ejercicio 3</h2>
+            <p>En esta tercera escena utilizaremos el cubo con textura de la práctica 3-1. Procedemos a crear un objeto GUI al que añadiremos controles para modificar parámetros de la figura (En este caso el bumpscale), y hacemos que se actualize
+                este valor de bumpscale en cada modificación del nuevo control en la GUI que hemos añadido. También aprendemos como introducir a la gui controles de estado como fps, latencia etc.
+            </p>
+                <iframe class="container" src="prac3-3.html">
+                    Escena 3
+                </iframe>
+                            <h2>Ejercicio 4</h2>
+                            <p>En este último ejercicio de la práctica 4 creamos un cubo , y le añadimos como materiales un objeto que conforma las 5 caras regulares, y una última cara especial con una textura distinta. Después añádimos otro cubo a una distancia determinada del inicial, además de añadir una hemilight para una visualización más clara de los cubos. Finalmente añadimos una nueva variable de controles FirstPersonControls que nos permita movernos como si
+                                Estuviesemos en primera persona dentro del planto donde se disponen los objetos, para ello añadimos tambien al bucle de animación la actualización de la variable controls creada </p>
+                <iframe class="container" src="prac3-4.html">
+                    Escena 4
+                </iframe>
+            <h2>Dificultades encontradas</h2>
+            <p>
+                Ha sido otra práctica muy entretenida en la que en principio no he tenido ningún problema.
+            </p>
+        </div>
+    </body>
+</html>
