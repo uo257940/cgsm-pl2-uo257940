@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Informe de prácticas de CGSM (2020-2020)</title>
+        <link rel="stylesheet" type="text/css" href="report.css">
+    </head>
+    <body>
+        <!-- Información general -->
+        <div id="head">
+            <table id="general">
+                <tr>
+                    <th class="header">Nombre:</th>
+                    <td>Pedro Palacio Estrada</td>                     
+                </tr>
+                <tr>
+                    <th>Práctica:</th>
+                    <td>4</td> 
+                </tr>
+            </table>
+        </div>
+        <div id="content">
+            <h1>Memoria</h1>
+            <h2>Descripción de la práctica</h2>
+                <p>
+                   En esta cuarta práctica continuamos aportando detalles al entorno 3d que hemos creado. En primer lugar tocaremos los conceptos de audio 3d añadiendolos a los elementos. A continuación seguiremos con
+                   conceptos de eventos al trazar rayos e instersecar con los objetos. Finalmente añadiremos detecciones de colisiones para no poder atravesar los objetos definidos. 
+                </p>
+            <h2>Ejercicio 1</h2>
+            <p>En este primer ejercicio partimos de el ejercicio 3-4 de la úiltima sesion donde teníamos los dos cubos cara a cara. Lo que se ha hecho es importar los sonidos
+                que queremos aplicar a cada mesh con sus atributos correspondientes. Tras ello, añadimos a los objetos el sonido y comprobamos que el audio 3d se escucha de cada caja.
+            </p>
+                <iframe class="container" src="prac4-1.html">                    
+                </iframe>
+                
+            <h2>Ejercicio 2</h2>
+            <p>Continuamos la práctica con un segundo apartado donde introducimos los conceptos de trazado de rayos sobre los elementos, por lo que añadimos un listener para escuchar los eventos de movimiento sobre los objetos intersecados.
+                En el caso de que sean intersecados, podemos distinguir que objeto es el colisionado a través del nombre que le tenemos que añadir al crear el elemento.
+            </p>
+            <p></p>
+                <iframe class="container" src="prac4-2.html">
+                    Escena 2
+                </iframe>
+            <h2>Ejercicio 3</h2>
+            <p>Tras añadir esta captura de eventos a través de ratón, añadimos un nuevo listener que se encargue de escuchar las pulsaciones de la key del espacio de nuestro teclado.
+                con un condicional distinguimos si al pulsar espacio estamos sobre una caja u otra, y dependiendo de esto damos play o stop a la música que se esté escuchando.
+                Además de esto, hacemos que al pulsar play se  sustituya la cara de los cubos por una cara con el botón encendido llamando a la renderización de esa cara cuando se tiene que actualizar.
+            </p>
+                <iframe class="container" src="prac4-3.html">
+                    Escena 3
+                </iframe>
+                            <h2>Ejercicio 4</h2>
+                            <p>Finalmente, introducimos colisiones a nuestro escenario. Para ello necesitamos un vector con las direcciones que podemos tomar, y con un bucle recorremos todas las posibles direcciones a tomar, y en el caso de que topemos un cuerpo
+                                en la dirección trazada, hacemos que se vuelva a la posición anterior, de modo que no podemos avanzar dentro del cuerpo. (Esta solución no es la idónea para la realidad debido a los redondeos en la colisión, pero para esta introduccióne es válida) </p>
+                <iframe class="container" src="prac4-4.html">
+                    Escena 4
+                </iframe>
+            <h2>Dificultades encontradas</h2>
+            <p>
+                A la hora de calcular las colisiones tuve varios problemas por desconocer donde ubicar la llamada a la actualización del control, pero finalmente logré ubicarlo donde se debe actualizar.
+                por el resto todo se entendió y se hizo en el momento y sin mucho problema.
+            </p>
+        </div>
+    </body>
+</html>
