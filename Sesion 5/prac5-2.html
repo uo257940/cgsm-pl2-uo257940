@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic template for the CGSM labs</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="module" defer src="dist/prac5-2.js"></script>
+    <script src="dash.all.min.js"></script>
+
+</head>
+<body>
+    
+    <div id="overlay">
+        <div>
+            <button id="startButton">Click to Play</button>
+            <p>Video playback with audio requires user interaction.</p>
+        </div>
+    </div>
+    <!-- Content of the page -->
+    <video id="video" class="videot" style="display:none">
+    </video>
+</body>
+<script>
+    (function () {
+        var url = "http://192.168.0.20:8080/videos.mpd";
+        var player = dashjs.MediaPlayer().create();
+        player.initialize(document.querySelector("#video"), url, true);
+    })();
+</script>
+</html>

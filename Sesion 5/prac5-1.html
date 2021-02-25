@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic template for the CGSM labs</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="dash.all.min.js"></script>
+
+</head>
+
+<body>
+    <div>
+    <video id="player"></video>
+</div>
+    <!-- Content of the page -->
+</body>
+<script>
+    (function () {
+        var url = "http://192.168.0.20:8080/videos.mpd";
+        var player = dashjs.MediaPlayer().create();
+        player.initialize(document.querySelector("#player"), url, true);
+    })();
+</script>
+
+</html>
