@@ -17,7 +17,7 @@
             </tr>
             <tr>
                 <th>Práctica:</th>
-                <td>5</td>
+                <td>6</td>
             </tr>
         </table>
     </div>
@@ -25,85 +25,46 @@
         <h1>Memoria</h1>
         <h2>Descripción de la práctica</h2>
         <p>
-            En esta quinta práctica de la asignatura introducimos los conceptos de reproducción adaptativa de videos con
-            dash gracias a sus manifiestos, y de que manera se crean este tipo de streamings con una máquina virtual de
-            linux , y ejecución de comandos que nos permiten obtener los manifiestos mencionados.
-            Finalmente utilizamos el manifiesto y porciones de audio y video (En distintas calidades) y los llamamos en
-            vez de utilizar un archivo local para la reproducción del video.
+           En esta sexta práctica de la asignatura, continuamos aprendiendo conceptos de reproducción de video en streaming, concretamente aprendemos a hacer transmisiones cogiendo nuestra propia imagen de la cámara que dispongamos y simulando un posible streaming
+           como el que se da en muchos ámbitos.
         </p>
         <h2>Ejercicio 1</h2>
         <p>
-            En este ejercicio respondemos a varias preguntas sobre los manifiestos:
-        <h3>Manifiesto 1</h3>
-        Q1-¿Cuántas codificaciones de audio distintas puede utilizar el cliente para adaptarse a condiciones cambiantes
-        de la red?
-        <ul>
-            <li>
-                1 codificación audio : mp4a.40.5
-            </li>
-            <li>
-                1 codificacion video con 5 distintas resoluciones: avc1.4D401E
-            </li>
-        </ul>
-
-        <h3> Manifiesto 2</h3>
-        Q1-¿Cuántas codificaciones de audio distintas puede utilizar el cliente para adaptarse a condiciones cambiantes
-        de la red?
-        <ul>
-            <li>
-                1 codificación audio : mp4a.40.29
-            </li>
-            <li>
-                1 codificacion video con 3 distintas resoluciones: avc1.4d401f
-            </li>
-        </ul>
+          En este ejercicio comenzamos creando una nueva página con unos nuevos estilos incluidos donde seleccionando el elmento video del DOM y utilizando javascript para  comenzar la captación de video, logramos obtener una visualizacióna del contenido que se muestra a través de nuestra cámara
         </p>
-
+        <iframe class="container" src="prac6-1.html">
+            Escena 1
+        </iframe>
         <h2>Ejercicio 2</h2>
-        <p>Continuamos la práctica utilizando un reproductor de prueba en la url https://dashif.org/ donde podemos
-            probar a reproducir videos según los manifiestos que se cargen.
-            De este modo cargamos los dos manifiestos que hemos descargado previamente y observamos las distintas
-            calidades y estadísticas de las reproducciones.
+        <p>
+            Continuamos la práctica con una nueva página prac6-2.html en la que añadimos un botón que nos permite capturar el fotograma que esté siendo visualizado por la cámara en el momento de la pulsación.
+            Además hacemos que con la pulsación de este botón, la imagen se descargue en nuestro equipo.
         </p>
-        <img src="media/BigBuck.png">
-        <p></p>
+        <iframe class="container" src="prac6-2.html">
+            Escena 2
+        </iframe>
         <h2>Ejercicio 3</h2>
         <p>
-            La práctica sigue descargando un .ova con una máquina virtual donde comenzaremos descargando el software
-            necesario para la ejecución de comandos para extraer video y audio de ficheros .mp4.
-            Este software es el paquete MP4Box que descargamos con apt-get. Además aprovechamos y descargamos los videos
-            correspondientes para probar sus estadísticas (fprobe) y también probar a extraer su audio o su video de
-            manera independiente (ffmpeg)
+            Este ejercicio es en el que comprendemos los conceptos propios de la transmisión del video en streaming. Basandonos en lo captado por la cámara, procedemos a incluir otro canvas sobre el que simulemos nuestra llamada.
+            El ejemplo intenta mostrar una simulación en la que nos llamemos a nosotros mismos para evitar complicaciones a través de la red. Para completar el ejercicio, nos encargamos de añadir los métodos correspondientes a cada pulsación de los botones
+            según vallamos a llamar, parar la llamada, o colgar, así como desabilitar los botones dependiendo de la acción.
+            El resultado final sería una web en la que tuviesemos un canvas con nuestra cámara mostrando su imagen, y a su vez simulando un envío donde nos visualizariamos de nuevo con cierta latencia debido al envío de fotogramas.
         </p>
-        <img src="media/FProbe.png">
-        <p>Aquí ponemos un ejemplo del listado de ficheros obtenidos tras la creación del manifiesto</p>
-        <img src="media/Ficheros_ffmpeg.png">
-
-        <h2>Ejercicio 3.2</h2>
-        <p>En este momento, continuamos instalando node y npm junto a http-server para lanzar facilmente un servidor
-            http con los ficheros de nuestro directorio, de manera que podamos acceder a los videos a través del
-            manifiesto facilmente </p>
-        <img src="media/EjemploHttp.png">
-        <h2>Ejercicio 3.3</h2>
-        <p>En esta pequeña sección probamos múltiples comandos relacionados con nuestros adaptadores de red ,
-            proporcionandoles unas estadíticas determinadas como una latencia de 400ms</p>
-        <h2>Ejercicio 3.4</h2>
-        <p>En este ejercicio partiendo de porciones de videos con audio creamos un manifiesto con 3 resoluciones
-            distintas y un audio, de manera que sirviendo el directorio con http-server podamos usar el manifiesto desde
-            el reproductor de prueba de dash:</p>
-        <img src="media/Screenshot_14.png">
-        <h2>Ejercicio 4.1</h2>
-        <p>Incrustamos en una página web normal un video con un script que cargue el video de dash en el inicio de la
-            página.</p>
-        <h2>Ejercicio 4.2</h2>
-        <p>En este último ejercicio simplemente reusamos la práctica 3-2 para insertar un video con mpeg en vez de
-            cargarlo desde local. De este modo llamamos al manifest y podemos reproducirlo de manera adaptativa.</p>
-            <h3 >En estos dos últimos ejercicios no pongo iframes con los mismos ya que se utiliza el manifest de mi máquina virtual.</h3>
-        <h2>Dificultades encontradas</h2>
-
+        <iframe class="container" src="prac6-3.html">
+            Escena 3
+        </iframe>
+        <h2>Ejercicio 4</h2>
         <p>
-          únicamente he tenido problemas a la hora de instalar npm debido a la versión de node que me permitía instalar, por lo que tuve que usar repos externos para instalar npm. También estuve parado en el ejercicio 3.4 un tiempo ya que 
-          estaba usando una url con https que no me permitía acceder al manifest.
+        Finalmente, vamos con e último ejercicio donde utilizamos el escenario con video 3d en movimiento de la práctica 3-2, y procedemos a cambiar ese video por las imágenes de nuestra cámara, por lo que estaremos incluyendo estos fotogramas
+        del video en el bucle de actualización donde se va renderizando la imagen en el escenario 3D    
+        </p>
+        <iframe class="container" src="prac6-4.html">
+            Escena 4
+        </iframe>
+        <h2>Dificultades encontradas</h2>
+        <p>
+          En mi lugar la práctica no me ha dado ningún problema al hacerla. Ha sido muy interesante ver como puede hacerse un streaming de una forma similar a la que hemos implementado, ya que actualmente hay múltiples servicios que permiten hacer esto
+          que tienen implementaciones más elaboradas, pero que realmente tienen esta base.
         </p>
     </div>
 </body>
